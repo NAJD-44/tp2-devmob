@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp"
+    tools:context=".DetailsPizzas">
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="169dp"
+        android:layout_height="82dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="20dp"
+        android:contentDescription="Image de la pizza"
+        app:srcCompat="@mipmap/pizza1" />
+
+    <TextView
+        android:id="@+id/nom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Nom de la pizza"
+        android:contentDescription="Nom de la pizza" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:padding="10dp"
+        android:text="Description"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:contentDescription="Titre: Description" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:contentDescription="Zone de défilement contenant la description et les ingrédients de la pizza">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Texte de description de la pizza"
+                android:contentDescription="Description de la pizza" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:padding="10dp"
+                android:text="Ingrédients"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:contentDescription="Titre: Ingrédients" />
+
+            <TextView
+                android:id="@+id/detailsIngred"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Liste des ingrédients de la pizza"
+                android:contentDescription="Détails des ingrédients de la pizza" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
